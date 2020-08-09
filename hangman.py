@@ -7,9 +7,7 @@ data = response.json()
 
 name = input("What is your name, good sir?\n")
 print(f"Welcome to Hangman, {name}! Your game well begin shortly, so do not fret!")
-for x in range(3):
-    time.sleep(x)
-    print("\n")
+time.sleep(1)
 counter = 0
 while True:
     word = choice(data)
