@@ -28,7 +28,7 @@ while True:
     if choice[0] == "e":
         print(encode(input("What would you like to encode?\n")), "\n")
     elif choice[0] == "d":
-        print(decode(input("What would you like to encode?\n")), "\n")
+        print(decode(input("What would you like to decode?\n")), "\n")
     elif choice == "quit":
         break
     else:
