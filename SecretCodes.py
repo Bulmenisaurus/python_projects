@@ -43,7 +43,7 @@ while True:
     if len(choice) < 1:
         print("The heck are you doing?")
     elif choice[0] == "e":
-        print(decode(input("What would you like to decode?\n")))
+        print(encode(input("What would you like to encode?\n")))
         print()
     elif choice[0] == "d":
         print(decode(input("What would you like to decode?\n")))
