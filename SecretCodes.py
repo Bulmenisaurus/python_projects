@@ -1,6 +1,7 @@
 # secret codes
 # chr() int -> str, ord() str --> int
 import random
+from time import sleep
 
 
 def encode(encode_input):
@@ -18,11 +19,19 @@ def decode(decode_input):
     for i in decode_input:
         bug += 1  # because of a glitch where first letter is bugged
         if bug > 1:  # and too lazy for string slicing (it's too complicated tbh)
-            decoded += chr((ord(str(i))-shift))
+            try:
+                decoded += chr((ord(str(i))-shift))
+            except:
+                print(f"{i} is bugged. :(")
     return decoded
 
 
+print("Welcome to the Hackers Encrpyt Secret Messages machine, or HESM for short.")
+sleep(.5)
 print("Simply type \"Quit\" to stop.")
+sleep(.5)
+print("Good luck on your hacking adventures!")
+sleep(.5)
 while True:
     choice = input("Would you like to decode or encode a message?\n").lower()
     if choice[0] == "e":
@@ -32,4 +41,5 @@ while True:
     elif choice == "quit":
         break
     else:
+        sleep(1)
         print("..... what?")
