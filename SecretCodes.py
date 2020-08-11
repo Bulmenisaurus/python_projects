@@ -19,11 +19,17 @@ def decode(decode_input):
     for i in decode_input:
         bug += 1  # because of a glitch where first letter is bugged
         if bug > 1:  # and too lazy for string slicing (it's too complicated tbh)
-            try:
-                decoded += chr((ord(str(i))-shift))
-            except:
-                print(f"We're pretty sure something went wrong, ecpecially with '{i}'")
+            # try:
+            decoded += chr((ord(str(i))-shift))
+            # except:
+            #   print(f"We're pretty sure something went wrong, ecpecially with '{i}'")
     return decoded
+
+def valid_input(validate_input):
+    if len(str(validate_input).strip()) > 2:
+        return True
+    else:
+        return False
 
 
 print("Welcome to the Hackers Encrpyt Secret Messages machine, or HESM for short.")
@@ -34,8 +40,10 @@ print("Good luck on your hacking adventures!")
 sleep(.7)
 while True:
     choice = input("Would you like to decode or encode a message?\n").lower()
-    if choice[0] == "e":
-        print(encode(input("What would you like to encode?\n")))
+    if len(choice) < 1:
+        print("The heck are you doing?")
+    elif choice[0] == "e":
+        print(decode(input("What would you like to decode?\n")))
         print()
     elif choice[0] == "d":
         print(decode(input("What would you like to decode?\n")))
@@ -43,5 +51,5 @@ while True:
     elif choice == "quit":
         break
     else:
-        sleep(1)
-        print("..... what?")
+       print("..... what?")
+       sleep(1)
