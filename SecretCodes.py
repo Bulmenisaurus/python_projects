@@ -5,7 +5,7 @@ from time import sleep
 
 
 def encode(encode_input):
-    shift = random.randint(0, 15000)
+    shift = random.randint(1000, 15000)
     encoded = chr(shift+1500)  # ord(encoded[0])-1500 == shift
     for i in encode_input:
         encoded += chr((ord(str(i))+shift))
@@ -24,6 +24,7 @@ def decode(decode_input):
             # except:
             #   print(f"We're pretty sure something went wrong, ecpecially with '{i}'")
     return decoded
+
 
 def valid_input(validate_input):
     if len(str(validate_input).strip()) > 2:
@@ -51,5 +52,5 @@ while True:
     elif choice == "quit":
         break
     else:
-       print("..... what?")
-       sleep(1)
+        print("..... what?")
+        sleep(1)
