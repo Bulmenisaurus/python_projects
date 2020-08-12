@@ -2,7 +2,7 @@
 # chr() int -> str, ord() str --> int
 import random
 from time import sleep
-import pyperclip
+from pyperclip import copy
 
 
 def encode(encode_input):
@@ -10,22 +10,25 @@ def encode(encode_input):
     encoded = chr(shift+1500)  # ord(encoded[0])-1500 == shift
     for i in encode_input:
         encoded += chr((ord(str(i))+shift))
-    pyperclip.copy(encoded)
+    copy(encoded)
     return encoded
 
 
 def decode(decode_input):
-    shift = ord(decode_input[0])-1500
-    decoded = ""
-    bug = 0
-    for i in decode_input:
-        bug += 1  # because of a glitch where first letter is bugged
-        if bug > 1:  # and too lazy for string slicing (it's too complicated tbh)
-            # try:
-            decoded += chr((ord(str(i))-shift))
-            # except:
-            #   print(f"We're pretty sure something went wrong, ecpecially with '{i}'")
-    return decoded
+    try:
+        shift = ord(decode_input[0])-1500
+        decoded = ""
+        bug = 0
+        for i in decode_input:
+            bug += 1  # because of a glitch where first letter is bugged
+            if bug > 1:  # and too lazy for string slicing (it's too complicated tbh)
+                # try:
+                decoded += chr((ord(str(i)) - shift))
+                # except:
+                #   print(f"We're pretty sure something went wrong, ecpecially with '{i}'")
+        return decoded
+    except IndexError:
+        print("Something went wrong :(")
 
 
 def valid_input(validate_input):
