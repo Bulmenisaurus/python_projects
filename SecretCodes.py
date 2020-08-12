@@ -2,6 +2,7 @@
 # chr() int -> str, ord() str --> int
 import random
 from time import sleep
+import pyperclip
 
 
 def encode(encode_input):
@@ -9,6 +10,7 @@ def encode(encode_input):
     encoded = chr(shift+1500)  # ord(encoded[0])-1500 == shift
     for i in encode_input:
         encoded += chr((ord(str(i))+shift))
+    pyperclip.copy(encoded)
     return encoded
 
 
