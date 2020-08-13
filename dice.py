@@ -7,6 +7,8 @@ dice_list = [
     f"{d1}\n{d2}\n{d1}",
     f"{d1}\n{d3}\n{d1}",
     f"{d1} \n{d1} \n{d1}"]
+
+
 def prnt_dice(num):
     print(" "+"_"*7)
     print(dice_list[int(num)-1])

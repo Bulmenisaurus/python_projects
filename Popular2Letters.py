@@ -10,7 +10,6 @@ def open_dict(choice_input):
         response = requests.get("http://raw.githubusercontent.com/sindresorhus/mnemonic-words/master/words.json")
         open_dict_return = response.json()
     else:
-        open_dict_return = []
         with open("Dictionary.txt", 'r') as english:
             open_dict_return = english.readlines()
             for x in range(len(open_dict_return)-1):  # last line is empty
@@ -38,7 +37,6 @@ def sort_letters(sort_input):
 
 def top_letters(top_input, length_of_sample):
     print("Here are the 10 most common word combos:")
-    keys_list, values_list = [], []
     counter = 0
     for key, value in top_input.items():
         if counter == 10:
