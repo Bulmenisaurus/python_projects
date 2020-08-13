@@ -53,7 +53,7 @@ data = open_dict(choice[0].lower())
 sorted_data = sort_letters(find_letters(data))
 print(f"Length of our data so far is {len(sorted_data)}.")
 top_letters(sorted_data, len(data))
-quit()
+
 ###################################
 ###################################
 # graphs all the points on an image
@@ -61,11 +61,11 @@ quit()
 main_img = Image.new("LA", (28, 28), "#FFF")  # 8-bit black/white with alpha
 draw = ImageDraw.Draw(main_img)
 count = 0
-for x in SortedTwoLetters.keys():
+for j in sorted_data.keys():
     try:
-        x_pos = string.ascii_lowercase.index(x[0]) + 1
-        y_pos = string.ascii_lowercase.index(x[1]) + 1
-        opacity = SortedTwoLetters[x] * (255 / max(SortedTwoLetters.values()))  # more common combinations are darker
+        x_pos = string.ascii_lowercase.index(j[0]) + 1
+        y_pos = string.ascii_lowercase.index(j[1]) + 1
+        opacity = sorted_data[j] * (255 / max(sorted_data.values()))  # more common combinations are darker
         draw.point((x_pos, y_pos), fill=(000, round(opacity)))  # draw da point
     except ValueError:
         idgaf_about_this_bug = True
