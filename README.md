@@ -11,4 +11,4 @@ messing about.
 * 😎 Cleaning up code and calming PEP8 overlords
 * 🕷🔨 For those pesky bugs you finally exterminated
 * 🎊 Welcoming inital commits with a party!
-*♻️ Cleaning files and folders
+* ♻️ Cleaning files and folders
