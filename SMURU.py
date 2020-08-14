@@ -11,16 +11,13 @@ smuru_guide = {
     "th": "ᵺ", "ng": "🆖", "NG": "🆖"
 
 }
-# ㎌ ㎍ ㎎ ㎏ ㏏ ㎐ ㎖ ㎙ ㎚ ㎛ ㎜ ㎝ ㎞
-# ㎧ ㏕ ㏔ ㎩ ㎭ ㏝ ㏅ ㏐ ㏓ ㏉ ㏜ ㏌ ㍲ ㏒ ㏎ ㏋ ㏂ ½ ⅓ ⅔ ¼ ¾ ⅕ ⅖ ⅗ ⅘ ⅙ ⅚ ⅛ ⅜ ⅝ ⅞ &
-# ₨ ₯ 🆙
 
 
 def smuru(smuru_input):
-    smuru_input = str(smuru_input)
-    for x in smuru_guide:
-        if x in str(smuru_input):
-            smuru_input = smuru_input.replace(x, smuru_guide[x])
+    smurufied = str(smuru_input)
+    for x in smurufied:
+        if x in str(smurufied):
+            smurufied = smurufied.replace(x, smuru_guide[x])
 
     return smuru_input
 
