@@ -18,18 +18,18 @@ response = requests.get("http://raw.githubusercontent.com/sindresorhus/mnemonic-
 data = response.json()
 
 name = input("What is your name, good sir?\n")
-print(f"{Colors.PURPL}Welcome to Hangman, {name}! Your game will begin shortly, so do not fret!{colors.ENDC}")
+print(f"{Colors.PURPL}Welcome to Hangman, {name}! Your game will begin shortly, so do not fret!{Colors.ENDC}")
 sleep(1)
 counter = 0
 while True:
     word = choice(data)
     guesses = []
-    turns = round(len(set(word)) * 1.5) + 5
+    turns = round(len(set(word)) * 1.5) + 3
     guessed = ""
     guessed_true = False
     if counter > 0:
         playAgain = input(f"{Colors.BLUE}{name}, would you like to play again?\n{Colors.ENDC}")
-        if playAgain.lower() == "no" or "nope" or "nah":
+        if playAgain.lower() in ["no", "nah", "nope", "never"]:
             break
     while turns > 0:
         guessed = ""
@@ -39,7 +39,7 @@ while True:
             else:
                 guessed += "_"
         if guessed == word:
-            print(f"Nice! You successfully finished!")
+            print(f"{Colors.GREEN}Nice! You successfully finished!{Colors.ENDC}")
             guessed_true = True
             break
         print(f"You have {Colors.BLUE}{Colors.BOLD}{turns}{Colors.ENDC} turns left!\n")
