@@ -7,7 +7,8 @@ smuru_guide = {
     "sm": "℠", "SM": "℠", "TEL": "℡", "tel": "℡",
     "No": "№", "N0": "№", "NO": "№", "ac": "℀",
     "KK": "㏍", "AS": "⅍", "KB": "㎅","MB": "㎆",
-    "GB" : "㎇", "cal": "㎈", "da": "㍲", "in": "㏌"
+    "GB": "㎇", "cal": "㎈", "da": "㍲", "in": "㏌",
+    "th": "ᵺ", "ng": "🆖", "NG": "🆖"
 
 }
 # ㎌ ㎍ ㎎ ㎏ ㏏ ㎐ ㎖ ㎙ ㎚ ㎛ ㎜ ㎝ ㎞
@@ -15,7 +16,7 @@ smuru_guide = {
 # ₨ ₯ 🆙
 
 
-def SMURU(smuru_input):
+def smuru(smuru_input):
     smuru_input = str(smuru_input)
     for x in smuru_guide:
         if x in str(smuru_input):
@@ -24,4 +25,4 @@ def SMURU(smuru_input):
     return smuru_input
 
 
-print(SMURU(input()))
+print(smuru(input()))
