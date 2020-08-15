@@ -19,9 +19,9 @@ print(len(contents))
 
 pair_counts = {}
 count = 0
-dimensions = input("Would you like your graph to be 1d or 2d?\n")
+dimensions = input("Would you like your graph to be 1d or 2d?\n")[0]
 
-if dimensions[0] == 2:
+if dimensions == "2":
     main_img = Image.new("RGB", (256, 256), "#FFF")
 else:
     main_img = Image.new("RGB", (256, 10), "#FFF")
@@ -29,7 +29,7 @@ draw = ImageDraw.Draw(main_img)
 rangenum = len(contents)-1
 for x in range(len(contents)-1):
     x_pos = contents[x]  # x position of the dot is x'th number
-    if dimensions[0] == 2:
+    if dimensions[0] == "2":
         y_pos = contents[x+1]       # in the 2d case, it matters what the y is
     else:
         y_pos = 0                   # in the 1d case, it doesn't
@@ -37,7 +37,8 @@ for x in range(len(contents)-1):
         pair_counts[(x_pos, y_pos)] += 1  # if (x, y) already in dict, change their count by 1
     else:
         pair_counts[(x_pos, y_pos)] = 1  # otherwise, add them to the dict with a count of 1
-if dimensions[0] == 2:
+if dimensions == "2":
+    print(pair_counts)
     for j in pair_counts:
         value = round(min(pair_counts[j], 20000) / 20000 * 255)
         color = (value, value//2, -value+255)
