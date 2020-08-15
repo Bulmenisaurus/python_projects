@@ -3,10 +3,14 @@ from functools import reduce  # reduces the darn fudgin lists (for loops are FOR
 
 
 def radix_sort(radix_input):
+    radixGIF = []
     radix_sorted = buckets(0, radix_input)
-    for x in range(len(str(max(radix_input)))-1):
+    radixGIF.append(radix_sorted)
+    for x in range(len(str(max(radix_input)))-1):  # repeats the sort for each digit in the biggest number
         radix_sorted = buckets(x+1, radix_sorted)
-        print(radix_sorted)
+        radixGIF.append(radix_sorted)
+    print(radix_sorted)
+    return radixGIF
 
 
 def buckets(digit, bucket_radix):
@@ -16,13 +20,13 @@ def buckets(digit, bucket_radix):
     for x in bucket_radix:
         x = str(x)
         if len(x) <= digit:
-            buckets_list[0].append(int(x))  # digits[x] is outside of x, input 0 by default
+            buckets_list[0].append(int(x))  # if digits[x] is outside of x, input 0 by default
         else:
-           buckets_list[int(x[::-1][digit])].append(int(x))
-    return reduce(lambda x, y: x+y, buckets_list)
+            buckets_list[int(x[::-1][digit])].append(int(x))
+    return reduce(lambda x, y: x+y, buckets_list)  # flattens out any nested lists
 
 
 length = int(input("How many integers long would you like your list to be?\n"))  # length of list
-random_list = [random.randint(0, length) for x in range(length)]  # shuffled list
-print(random_list)
-radix_sort(random_list)
+random_list = [random.randint(0, length) for i in range(length)]  # shuffled list
+GIFradix = radix_sort(random_list)
+print(len(GIFradix))
