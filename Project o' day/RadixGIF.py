@@ -9,8 +9,7 @@ def radix_sort(radix_input):
     for x in range(len(str(max(radix_input)))-1):  # repeats the sort for each digit in the biggest number
         radix_sorted = buckets(x+1, radix_sorted)
         radixGIF.append(radix_sorted)
-    print(radix_sorted)
-    return radixGIF
+    return radix_sorted
 
 
 def buckets(digit, bucket_radix):
@@ -29,4 +28,4 @@ def buckets(digit, bucket_radix):
 length = int(input("How many integers long would you like your list to be?\n"))  # length of list
 random_list = [random.randint(0, length) for i in range(length)]  # shuffled list
 GIFradix = radix_sort(random_list)
-print(len(GIFradix))
+print(GIFradix == sorted(random_list))
