@@ -22,13 +22,13 @@ def decode(decode_input):
         for i in decode_input:
             bug += 1  # because of a glitch where first letter is bugged
             if bug > 1:  # and too lazy for string slicing (it's too complicated tbh)
-                # try:
-                decoded += chr((ord(str(i)) - shift))
-                # except:
-                #   print(f"We're pretty sure something went wrong, ecpecially with '{i}'")
+                try:
+                    decoded += chr((ord(str(i)) - shift))
+                except:
+                   print(f"We're pretty sure something went wrong, especially with letter", i)
         return decoded
     except IndexError:
-        print("Something went wrong :(")
+        return "Something went wrong :("
 
 
 def valid_input(validate_input):

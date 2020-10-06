@@ -11,9 +11,9 @@ def generate_terrain(main_func_list):
         main_func_list.append(0)
         print("reset")
         while len(main_func_list) < 20:
-            main_func_list.append(clamp(-6, 6, main_func_list[0] + randint(-1, 1)))
+            main_func_list.insert(0, clamp(-6, 6, main_func_list[0] + randint(-1, 1)))
     else:
-        del main_func_list[len(main_func_list)-1]
+        del main_func_list[-1]
         shift_terrain = clamp(-6, 6, main_func_list[0] + randint(-1, 1))
         main_func_list.insert(0, shift_terrain)
     return main_func_list

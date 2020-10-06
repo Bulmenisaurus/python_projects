@@ -1,0 +1,2 @@
+print(f"\033[35m{'   t!itoizjzitvbar %ysasde-rbg yyiptpqaqh  '[::-2].strip().capitalize()}\033[90m\n{chr(60)+(l_1 := '------~~~~~~**') + l_1[::-1]+chr(62)}\033[0m\n\n{'!segassem terces dnes nac eW'[::-1]}")
+print(f"\n\n{(message := ' '+f'Happy Valetine{chr(39)}s day, Hobbert!')}\n{(line := (hrt := '💕')+'—'*len(message)+hrt)}\nLorizzle ipsizzle you son of a bizzle shizzlin dizzle gangster,\nthe bizzle adipiscing elit. Nullam stuff its fo rizzle, fo\nshizzle volutpizzle,suscipit ghetto, gravida crunk, crazy.\n\n{line}\n— \033[1mEnt0_3301\033[0m, with love")
