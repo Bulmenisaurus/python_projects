@@ -57,5 +57,5 @@ for x in range(5):
 ({5-x} ajectives remaining.)\n').strip().lower().replace(' ', ''))
 print(adj_inputs)
 spell_final = gen_from_adj(adj_inputs) + ' '
-print(((spell_final * 10) + '\n')* 100)
+print(((spell_final * 10) + '\n') * 100)
 
