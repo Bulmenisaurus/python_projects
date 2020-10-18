@@ -3,9 +3,10 @@
  If you cross  out this 2 and write it in front of the code instead,
  you get a number that is twice as big as the original  one. What was the original secret code?
 `
+Apparently the solutions is in the thousands of trillions... -_-
 """
 
-for x in range(1000000  ):
+for x in range(1000000):
     x = x*19
     str_x = list(str(x))
     if str_x[-1] == '0':

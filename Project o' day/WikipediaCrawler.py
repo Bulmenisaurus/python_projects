@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup           # for parsing html and getting useful da
 import requests                         # for actually receiving that html
 from collections import namedtuple      # Organize data so you can easily access and read it
 import unicodedata                      # Removing all the \x0a's and other stuff from beautifulSoup's mess
-from time import sleep as chill, time   # So that all that informatino doesn't overwhelm rigth away
+from time import sleep as chill, time   # Wait for a bit before allowing full access 8)
 
 startTime = time()
 # I have no idea why I don't need to explicitly follow the redirect, but I'll take it
