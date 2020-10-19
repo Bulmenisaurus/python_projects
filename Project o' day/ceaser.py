@@ -1,4 +1,5 @@
 import string
+from random import randint
 
 
 # checks english dictionary for % of words. Feel free to replace this with your own file or request.
@@ -13,20 +14,23 @@ def check_wrd(wrd):
             return False
 
 
+alph = string.ascii_letters[0:26]
 if (choice := input("Would you like to encode, decode, or hack a ceaser shift?\n")).lower() == 'encode':
+    to_encode = input("What would you like to encode?\n")
+    key = randint(1, 25)
     print("Done!")
+    print(''.join([alph[(alph.index(x.lower())+key) % 26] if x.lower() in alph else x for x in to_encode]))
 elif choice == 'decode':
     pass
 elif choice == 'hack':
     input("Password: ")
-    print("oops, that input isnt connected to anything. Oh well! ¯\\_(ツ)_/¯")
+    print("Oops, that input isn't connected to anything. Oh well! ¯\\_(ツ)_/¯")
 
     secret_code = input("What message would you like to intercept & hack?\n")
 
     decodings = validating = []
 
     for shift in range(26):
-        alph = string.ascii_letters[0:26]
         decoded = [alph[(alph.index(x.lower())+shift) % 26] if x.lower() in alph else x for x in secret_code]
         decodings.append(''.join(decoded))
 
