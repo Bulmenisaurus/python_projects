@@ -19,6 +19,7 @@ if (choice := input("Would you like to encode, decode, or hack a ceaser shift?\n
     to_encode = input("What would you like to encode?\n")
     key = randint(1, 25)
     print("Done!")
+    print("Key:", key)
     print(''.join([alph[(alph.index(x.lower())+key) % 26] if x.lower() in alph else x for x in to_encode]))
 elif choice == 'decode':
     pass
@@ -28,13 +29,12 @@ elif choice == 'hack':
 
     secret_code = input("What message would you like to intercept & hack?\n")
 
-    decodings = validating = []
+    decodings, validating = [], []
 
     for shift in range(26):
         decoded = [alph[(alph.index(x.lower())+shift) % 26] if x.lower() in alph else x for x in secret_code]
         decodings.append(''.join(decoded))
 
-    print(decodings[-2])
     for count, sentence in enumerate(decodings):
         try:
             validate_words, fract = (0, len(sentence.split(' ')))
@@ -43,7 +43,7 @@ elif choice == 'hack':
                     validate_words += 1
             validating.append(validate_words/fract)  # number from 0-1 that shows how many % words are in the engl dictionary
         except:
-            print(sentence)
+            print
 
     print("Hacking complete:\n\n")
     print(decodings[validating.index(max(validating))])

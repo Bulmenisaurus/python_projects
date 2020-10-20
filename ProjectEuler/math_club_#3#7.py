@@ -14,3 +14,4 @@ for x in range(1000000):
     str_x.insert(0, str_x[-1])
     if str_x[:-2] == list(str(x*2)):
         print(x)
+
