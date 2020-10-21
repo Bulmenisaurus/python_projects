@@ -45,7 +45,7 @@ def gen_words_from_patterns(word_patterns, amount=1, min_len=2, capitalize=False
     return words
 
 
-with open("../Dictionary.txt", "r") as dict_:
+with open("../python_data/Dictionary.txt", "r") as dict_:
     data_ = dict_.read().splitlines()
     shuffle(data_)
     data_ = data_[:100]

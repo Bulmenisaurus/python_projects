@@ -10,7 +10,7 @@ def open_dict(choice_input):
         response = requests.get("http://raw.githubusercontent.com/sindresorhus/mnemonic-words/master/words.json")
         open_dict_return = response.json()
     else:
-        with open("Dictionary.txt", 'r') as english:
+        with open("python_data/Dictionary.txt", 'r') as english:
             open_dict_return = english.readlines()
             for x in range(len(open_dict_return)-1):  # last line is empty
                 open_dict_return[x] = open_dict_return[x].strip("\n")

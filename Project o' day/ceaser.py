@@ -3,7 +3,7 @@ from random import randint
 
 
 # checks english dictionary for % of words. Feel free to replace this with your own file or request.
-with open("../Dictionary.txt", "r") as check_eng:  # checks english dictionary
+with open("../python_data/Dictionary.txt", "r") as check_eng:  # checks english dictionary
     dictionary_ = check_eng.read()
 
 
