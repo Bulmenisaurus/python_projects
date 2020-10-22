@@ -70,12 +70,10 @@ volatility = .02
 lock_down = False
 
 for x in range(0, iterations):
-    rand_num = random.random()
-    change_percent = 2 * volatility * rand_num
-    if change_percent > volatility:
-        change_percent -= (2 * volatility)
-    change_amount = old_price * change_percent
-    new_price = round((old_price + change_amount), 2)
+    rand_num = (random.random()*2-1)/5
+    change_amount = old_price * rand_num
+    new_price = old_price + change_amount
+    assert new_price != 0
     stock_market.insert(0, new_price)
     old_price = new_price
     if len(stock_market) > 4:  # because stock_bot() needs first 4 items for percent and previous percent
