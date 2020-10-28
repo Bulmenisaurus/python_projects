@@ -22,7 +22,9 @@ if (choice := input("Would you like to encode, decode, or hack a ceaser shift?\n
     print("Key:", key)
     print(''.join([alph[(alph.index(x.lower())+key) % 26] if x.lower() in alph else x for x in to_encode]))
 elif choice == 'decode':
-    pass
+    to_decode = input("What message would you like to decode?\n")
+    key = 26-int(input("What is the key?\n"))
+    print(''.join([alph[(alph.index(x.lower()) + key) % 26] if x.lower() in alph else x for x in to_decode]))
 elif choice == 'hack':
     input("Password: ")
     print("Oops, that input isn't connected to anything. Oh well! ¯\\_(ツ)_/¯")
@@ -47,3 +49,4 @@ elif choice == 'hack':
 
     print("Hacking complete:\n\n")
     print(decodings[validating.index(max(validating))])
+
