@@ -8,10 +8,6 @@ def eval_input(variables_list, to_eval, type_code):
         return '\"' + str(to_eval) + '\"'
 
 
-
-
-
-
 def compile_(input_):
     """Compile code by lexifying it"""
     code = input_.split('\n')
@@ -42,24 +38,17 @@ def compile_(input_):
             error(count, 'Compile')
 
 
-def error(error_line, type):  # for errors of all types
-        print(f"\033[91mBeep boop line {error_line} sucks! ({type} error)\033[0m")
+def error(error_line, type_):  # for errors of all types
+    print(f"\033[91mBeep boop line {error_line} sucks! ({type_} error)\033[0m")
 
 
 def substs(st, subst):
     for y in subst:
-        if not y in st:
+        if y not in st:
             return False
     return True
-
 
 
 while True:
     x = input('Your code?\n')
     compile_(x)
-
-
-
-
-
-
