@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<title>{setting3}</title>
+<link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Raleway:wght@500&family=Spectral+SC:wght@500&display=swap;text={setting2}" rel="stylesheet">
+<style>
+.w3-jumbo {font-size: 75px!important}
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  min-height: 100%;
+  background-color: black;
+  background-size: cover;
+}
+.w3-large {font-size: 20px}
+#date {
+    color: {setting1};
+    text-shadow: 0 0 1px #FFFFFF, 0 0 1px #FFFFFF, 0 0 1px #FFFFFF;
+    font-family: 'Major Mono Display', 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+.w3-display-middle {top: 30%}
+#quote {margin-top: 40px}
+#word {text-align: center; font-family: 'Spectral SC', 'Raleway';}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <div class="w3-display-topleft w3-padding-large w3-xlarge" id="date">
+    {content4}
+    </div>
+    <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top" id="word">{content1}</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">{content2}</p>
+        <div class="w3-container" id="quote">
+            {content3}
+        </div>
+    </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+    <!-- Don't wanna get sued.... -->
+    Thanks to <a href="https://www.w3schools.com/w3css/tryw3css_templates_coming_soon.htm" target="_blank">w3.css</a> for their site template!
+  </div>
+</div>
+
+</body>
+</html>
