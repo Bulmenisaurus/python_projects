@@ -10,3 +10,4 @@ chr(num % 256) + c(num//256) if num else ""*20300
 o0=c(0x646C727D777B2C7D);a=getattr(o0,'replace')(
 '{',' ',).replace('}', 'o');print   (a+f"", **O )
 exec("OO0O0OO0O(\"""!!\", *"+chr(1344 >> 5)+"O)")
+
