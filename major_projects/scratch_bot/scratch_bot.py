@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import re
 from time import sleep as chill
 from random import random
+import pynput
 
 from selenium import webdriver
 import selenium
@@ -34,7 +35,7 @@ class MeBot:
         login_button = driver.find_element_by_xpath("/html/body/div[1]/div[4]/div[7]/div[2]/div/div[1]/form/div[1]/textarea")
         login_button.click()
 
-        username_input = driver.find_element_by_xpath(r'//*[@id="login-dialog"]/form/fieldset/div[2]/div[1]/div/input')
+        username_input = driver.find_element_by_xpath(r'/html/body/div[3]/form/fieldset/div[2]/div[1]/div/input')
 
         password_input = driver.find_element_by_xpath("/html/body/div[3]/form/fieldset/div[2]/div[2]/div/input")
         for x in range(len(self.username)):

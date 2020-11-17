@@ -25,7 +25,8 @@ def decode(decode_input):
                 try:
                     decoded += chr((ord(str(i)) - shift))
                 except:
-                   print(f"We're pretty sure something went wrong, especially with letter", i)
+                    print(f"We're pretty sure something went wrong, especially with letter", i)
+                    raise
         return decoded
     except IndexError:
         return "Something went wrong :("
