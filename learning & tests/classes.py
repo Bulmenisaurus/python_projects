@@ -11,9 +11,9 @@ class Button:
     def __call__(self, output=True):  # prints or returns info about itself when called
         data = {"name": self.name, "clicked": self.clicked_num}
         if output:
-            print('\n'.join([f"{x} = {data[x]}" for x in data]))
+            print('\n'.join([f"{x} = {data[x]}" for x in data]))  # prints data in a human-readable way
         else:
-            return data
+            return data  # returns raw dict
 
     def click(self):
         print("Click!")
@@ -32,19 +32,18 @@ class Slider:
         self.s_max = s_max
         self.s_min = s_min
 
-    def __add__(self, other):
-        self.value += other
+    def _clamp(self, value):  # useful way to automagically clamp stuff :)
+        return sorted([self.s_min, self.s_max, value])[1]
 
-    def __sub__(self, other):
-        self.value -= other
-
-    def slide_to(self, value: int):
+    def slide_to(self, value: int):  # same as self.value = x but with clamps
         self.value = value
+        self.value = self._clamp(self.value)
 
     def slide(self, value):
         self.value += value
+        self.value = self._clamp(self.value)
 
-    def __call__(self, output=True):
+    def __call__(self, output=True):  # executed when Slider object is called
         data = {"min": self.s_min,
                 "max": self.s_max,
                 "value": self.value,
@@ -64,18 +63,20 @@ for _ in range(3):
     button.click()
 
 print("Calling button!")
-button()
+button()  # prints some useful information about the button
 
 
 print("\n\n\n------Starting slider section-------\n\n\n\n")
 
 myslider = Slider(s_min=-50,
                   s_max=50,
-                  starting_value=0
-                  )
+                  starting_value=0)
 
-myslider.slide_to(int(input("What would you like to set the value to?")))
-print(myslider.value)
+myslider.slide_to(int(input("What would you like to set the value to?\n")))
+print("Slider value is now:", myslider.value)
+
+myslider()
+
 
 
 
