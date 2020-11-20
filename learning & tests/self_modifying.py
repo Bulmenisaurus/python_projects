@@ -12,7 +12,6 @@ with open(__file__, "r") as self_modifying:  # __file__ is a str representation 
     to_write = self_modifying.read().split('\n')
     to_write[-4] += "+1"
 try:
-    1/0
     with open(__file__, "w") as self_modifying_write:  # Write and read arent allowed, so nested open()s are a thing :(
         self_modifying_write.write('\n'.join(to_write))  # the actual modifying bit
 except:
