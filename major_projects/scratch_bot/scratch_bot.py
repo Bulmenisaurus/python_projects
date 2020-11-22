@@ -3,14 +3,11 @@ from bs4 import BeautifulSoup
 import re
 from time import sleep as chill
 from random import random
-import pynput
 
 from selenium import webdriver
-import selenium
+# import selenium
 
-"""
-Login info in /Users/meow/programming/ME-BOT login.txt
-"""
+
 class MeBot:
     def __init__(self, url="https://scratch.mit.edu/users/ME_BOT-py/",
                  username="ME_BOT-py",
@@ -26,13 +23,16 @@ class MeBot:
         self.stats = stats
         self.username = username
         self.base = "https://scratch.mit.edu/"
+        self.client = None
 
     def login(self):
-        driver = webdriver.Chrome(executable_path="/Users/meow/programming/PycharmProjects/!Python_on_github/major_projects/scratch_bot/chromedriver")
+        driver = webdriver.Chrome(executable_path="/Users/meow/programming/PycharmProjects/!Python_on_github"
+                                                  "/major_projects/scratch_bot/chromedriver")
         driver.get(self.base+'/users/'+self.username)
 
         chill(3)
-        login_button = driver.find_element_by_xpath("/html/body/div[1]/div[4]/div[7]/div[2]/div/div[1]/form/div[1]/textarea")
+        login_button = driver.find_element_by_xpath("/html/body/div[1]/div[4]/div[7]/div[2]/div/div[1]/form/div["
+                                                    "1]/textarea")
         login_button.click()
 
         username_input = driver.find_element_by_xpath(r'/html/body/div[3]/form/fieldset/div[2]/div[1]/div/input')
@@ -77,8 +77,6 @@ class MeBot:
     def stop(self):
         self.client.close()
         self.client.quit()
-
-
 
 
 bot = MeBot()

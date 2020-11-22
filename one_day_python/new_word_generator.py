@@ -4,6 +4,7 @@ from collections import namedtuple
 import pyphen
 import statistics
 
+
 class Colors:
     PURPL = '\033[95m'
     BLUE = '\033[94m'

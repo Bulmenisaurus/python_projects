@@ -1,6 +1,6 @@
 """
 Open file, extract data
-Add letters of each word, append to dictinoary
+Add letters of each word, append to dictionary
 build new words off of that
 """
 import string
@@ -31,7 +31,6 @@ def extract_wordpatterns(wordpattern_data):
 
 
 def gen_words_from_patterns(word_patterns, amount=1, min_len=2, capitalize=False):
-    underline = '̱'
     words = []
     while not len(words) >= amount:
         word = choice(word_patterns['|'])

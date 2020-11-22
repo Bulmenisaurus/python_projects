@@ -1,7 +1,5 @@
 import os
-from collections import Counter
 from PIL import Image, ImageDraw
-from math import sqrt
 
 file = input("What file would you like to examine? (enter the full path)\n")
 head, tail = os.path.split(file)
@@ -50,10 +48,6 @@ else:
         draw.point((j[0], j[1] - 1), color)
         for x in range(10):
             draw.point((j[0], j[1] + x), color)
-
-
-
-
 
 
 main_img.show()

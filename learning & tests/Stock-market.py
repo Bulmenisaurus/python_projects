@@ -5,7 +5,7 @@ from math import floor
 ########################################
 ########################################
 # Bot functions
-# these kinda just log the transactions and dont do much ._.
+# these kinda just log the transactions and don't do much ._.
 
 
 def sell_shares(share_num, sell_share_price):
@@ -34,7 +34,7 @@ def stock_bot(money, stock_list, shares, buy_lockdown):
         share_buy_percent = (percent-100)/3  # how many % of available stocks it should buy
         if share_buy_percent > 1:
             share_buy_percent = 1
-        shares_to_buy = floor((money//stock_list[0]) * share_buy_percent)  # does the thign from line 37
+        shares_to_buy = floor((money//stock_list[0]) * share_buy_percent)
         if shares_to_buy > 1:
             buy_shares(money, stock_list[0], shares_to_buy)
             money_calculated -= stock_list[0] * shares_to_buy  # just subtracts the money lost from buying
@@ -97,9 +97,9 @@ if all_shares > 1:
 #####################################
 # Graph all data
 
-fig, axs = plt.subplots(2, constrained_layout=True, sharex='all')  # makes the graphs not clip? id rlly know this
+fig, axs = plt.subplots(2, constrained_layout=True, sharex='all')  # makes the graphs not clip? I don't really know this
 fig.suptitle('The results:\n')                          # main title
-axs[0].plot(stock_market[::-1], linewidth=1.0)                # plots graph and makes line thinner
+axs[0].plot(stock_market[::-1], linewidth=1.0)          # plots graph and makes line thinner
 axs[0].set_title("Stock market!")
 axs[1].plot(bank_account, 'tab:green', linewidth=1.0)   # thin line, and a nice green color!
 axs[1].set_title("All the bots money ")

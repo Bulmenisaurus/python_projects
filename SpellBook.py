@@ -1,10 +1,8 @@
 from random import shuffle, randint
 
 
-def gen_from_adj(adj_list): #abcdefghijklmnopqrstuvwxyz
+def gen_from_adj(adj_list):
     spell = ''
-    consonants = list('bcdfghjklmnpqrstvwxz')
-    vowels = list('aeiouy')
     for count, test in enumerate(adj_list):
         if len(test) < 3:
             del adj_list[count]
@@ -52,9 +50,9 @@ def is_vowel(letter, reverse=False):
 
 
 adj_inputs = []
-for x in range(5):
+for k in range(5):
     adj_inputs.append(input(f'Enter an adjective that this spell will make you! \
-({5-x} ajectives remaining.)\n').strip().lower().replace(' ', ''))
+({5-k} ajectives remaining.)\n').strip().lower().replace(' ', ''))
 print(adj_inputs)
 spell_final = gen_from_adj(adj_inputs) + ' '
 print(((spell_final * 10) + '\n') * 100)

@@ -45,8 +45,10 @@ class Player:
         while self.xp > lvl_requirements[self.lvl]:
             self.xp -= lvl_requirements[self.lvl]
             self.lvl += 1
-            print("Congrats! You lvled up to level ", self.lvl)
-            print(f"{self.xp=}")
+
+            if display:
+                print("Congrats! You lvled up to level ", self.lvl)
+                print(f"{self.xp=}")
 
             if self.lvl == 100:
                 return

@@ -13,8 +13,6 @@ header = {'Accept': '*/*', 'Connection': 'keep-alive',
           'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1'}
 
 
-
-
 def collect_data(letters: str) -> dict:
     all_data = {}
     for search in letters:
@@ -24,7 +22,7 @@ def collect_data(letters: str) -> dict:
         regex = r"\<div id=\"result-stats\"(.*?)\<"
         i = repr(re.search(regex, html))
         assert i is not None
-        #print(i)
+        # print(i)
         try:
             all_data[search] = i[i.index("About ")+6:i.index(' re')].strip()
             print(f"{goog_url} = {all_data[search]}")

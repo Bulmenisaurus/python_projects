@@ -11,7 +11,8 @@ print("Welcome to corruptor! This project doesnt corrupt the original image,\n"
 
 
 filename = "/Users/meow/Downloads/PogCorn.png"
-#filename = input("What image would you like to corrupt?\n")
+
+#  filename = input("What image would you like to corrupt?\n")
 
 newdirectory = "/Users/meow/programming/PycharmProjects/!Python_on_github/major_projects/corrupter_of_images/corrupted/"
 newfile = "corrupted"+str(len(glob.glob('corrupted/*')))+".txt"

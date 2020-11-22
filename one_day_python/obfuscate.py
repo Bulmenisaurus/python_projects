@@ -50,7 +50,6 @@ def obfuscate_num(num: int):
 
         return "sum("+repr(bool_list)+")"
 
-
     choices = []
     funcs = [uni_obfuscate, set_obfuscate,
              bit_obfuscate, boolsum_obfuscate,
@@ -60,7 +59,6 @@ def obfuscate_num(num: int):
             choices.append(obfuscated_choice)
 
     return choice(choices)
-
 
 
 print(obfuscate_num(32000))

@@ -1,5 +1,5 @@
-import string
 from random import choice
+
 
 def multiline_input(__prompt):
     print(__prompt)

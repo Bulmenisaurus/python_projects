@@ -14,7 +14,7 @@ with open(__file__, "r") as self_modifying:  # __file__ is a str representation 
 try:
     with open(__file__, "w") as self_modifying_write:  # Write and read arent allowed, so nested open()s are a thing :(
         self_modifying_write.write('\n'.join(to_write))  # the actual modifying bit
-except:
+except IOError:
     print("There is an error writing to the file. Here is what the source would've looked like:\n" + "-" * 20 + "\n")
     print('\n'.join(to_write))
     print("-" * 20)

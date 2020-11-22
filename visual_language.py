@@ -1,6 +1,5 @@
 import string
-from PIL import Image, ImageDraw, ImageColor
-from math import ceil
+from PIL import Image, ImageColor
 
 
 def _encode_letters(letters: str):

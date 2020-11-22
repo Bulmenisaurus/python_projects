@@ -22,7 +22,7 @@ def choose_path() -> tuple:
 
 
 def random_path() -> list:
-    files = random.choices(os.listdir("/Users/meow/Downloads/Vanilla_Resource_Pack_1.16.20/textures/blocks/"), k=2)
+    files = random.choices(listdir("/Users/meow/Downloads/Vanilla_Resource_Pack_1.16.20/textures/blocks/"), k=2)
     print(' + '.join(files))
     files = ["/Users/meow/Downloads/Vanilla_Resource_Pack_1.16.20/textures/blocks/"+k for k in files]
     return files
@@ -39,7 +39,7 @@ img_1 = Image.open(path1, 'r').convert('RGB')  # open minecraft texture in rgb m
 img_2 = Image.open(path2, 'r').convert('RGB')
 img_1_clrs, img_2_clrs = {}, {}
 
-#sort_by = input('Sort by darkness? (recommended)\n')
+# sort_by = input('Sort by darkness? (recommended)\n')
 sort_by = 'True'
 
 if not eval(sort_by):

@@ -6,10 +6,12 @@ dice_list = [
     f"{d4}\n{d3}\n{d4[::-1]}",
     f"{d1}\n{d2}\n{d1}",
     f"{d1}\n{d3}\n{d1}",
-    f"{d1} \n{d1} \n{d1}"]
+    f"{d1}\n{d1}\n{d1}"]
 
 
 def prnt_dice(num):
     print(" "+"_"*7)
     print(dice_list[int(num)-1])
     print(" "+"‾"*7)
+
+prnt_dice(6)
