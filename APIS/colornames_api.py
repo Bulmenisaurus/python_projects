@@ -2,7 +2,6 @@ import json
 import requests
 import sys
 
-
 if sys.argv[0] != 'python':
     class Colors:
         PURPL = '\033[95m'
@@ -24,17 +23,17 @@ else:
         BOLD = ''
         UNDERLINE = ''
 
-
 if sys.argv[0] != 'python':
     def get_color_escape(r, g, b, background=False):
         # from https://stackoverflow.com/a/45782972
-        return '\033[{};2;{};{};{}m'.format(48 if background else 38, r, g, b)+'\033[0m'
+        return '\033[{};2;{};{};{}m'.format(48 if background else 38, r, g, b) + '\033[0m'
 else:
     def get_color_escape(*args):
         return ''
 
+
 def clr_from_hex(hexclr: str) -> dict:
-    color_url = "https://colornames.org/search/json/?hex="+hexclr.strip("#")
+    color_url = "https://colornames.org/search/json/?hex=" + hexclr.strip("#")
     json_data = requests.get(color_url).text
     color = json.loads(json_data)
     return color
@@ -49,13 +48,13 @@ def fresh_colors() -> list:
 
 def format_clr(clr: dict) -> str:
     rgb = tuple(int(clr['hexCode'][i:i + 2], 16) for i in (0, 2, 4))
-    color = get_color_escape(*rgb)+clr['hexCode']
+    color = get_color_escape(*rgb) + clr['hexCode']
 
-    formatstr = (clr['name'],  # name of color, such as `red`
-                 color,  # hex code of color, such as `#ff0000`
-                 ("ID: " if 'nameId' in clr else '') + str(clr.get('nameId')))  # id of color, such as `ID: 1`
+    formatstring = (clr['name'],  # name of color, such as `red`
+                    color,  # hex code of color, such as `#ff0000`
+                    ("ID: " if 'nameId' in clr else '') + str(clr.get('nameId')))  # id of color, such as `ID: 1`
 
-    formatted_clr = "{}: #{}\n{}\n".format(*formatstr)
+    formatted_clr = "{}: #{}\n{}\n".format(*formatstring)
     return formatted_clr
 
 
@@ -80,7 +79,3 @@ elif choice == '3':
     ''
 else:
     print("Not a valid option :(")
-
-
-
-

@@ -3,7 +3,7 @@ import json
 import random
 
 
-def jokeapi():
+def joke_api():
     """
     Thanks to https://sv443.net/jokeapi/v2/ for their clear documentation! :)
 
@@ -20,7 +20,7 @@ def jokes():
     """
     I forgot the URL lol......
 
-    :return: the str joek
+    :return: the str joke
     """
     joke_url = random.choice(
         [
@@ -35,8 +35,7 @@ def jokes():
     return json_data['setup'] + '\n' + json_data['punchline']
 
 
-
-joke_choice = random.choice([jokeapi, jokes])
+joke_choice = random.choice([joke_api, jokes])
 
 print(joke_choice())
 

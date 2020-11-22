@@ -2,7 +2,7 @@ import requests
 import json
 
 
-def get_recipe(ingredients=(), query: str = ''):
+def get_recipe(ingredients=(), query: str = '') -> None:
     base_url = "http://www.recipepuppy.com/api/?"  # base url
     base_url += 'i='+','.join(ingredients)         # adds ingredients in url format `i=cheese, garlic,`
     base_url += '&q='+query                        # adds query in format `&q='mac and cheese'`
@@ -20,14 +20,15 @@ def get_recipe(ingredients=(), query: str = ''):
         print(json.dumps(recipe_json, indent=4))
 
 
-def format_results(results):
+def format_results(results: list) -> None:
     for index, result in enumerate(results):
-        fomatted = "{}\nIngredients: {}\nlink: {}\n\n\n".format(result['title'], result['ingredients'], result['href'])
+        formatted = "{}\nIngredients: {}\nlink: {}\n\n\n".format(result['title'], result['ingredients'], result['href'])
         print(str(index)+")\n"+"-"*50)
-        print(fomatted)
+        print(formatted)
+
 
 get_recipe(
-    input("What ingredients do you have available? Enter a comma-seperated list!\n")
+    input("What ingredients do you have available? Enter a comma-separated list!\n")
     .replace(' ', '')
     .split(','),
 
