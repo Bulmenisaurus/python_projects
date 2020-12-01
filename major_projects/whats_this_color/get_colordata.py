@@ -41,12 +41,14 @@ def color_thecolorapi(color: str) -> dict:
             ]
         },
 
-        'name': color_data['name']['closest_named_hex']
+        'name': color_data['name']['value']
     }
 
     return data
 
 
-
+def get_color_name(color: str):
+    choice1 = color_colornames_api(color)
+    return choice1 if choice1 else color_thecolorapi(color)['name']
 
 
