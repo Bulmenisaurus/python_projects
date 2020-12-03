@@ -56,14 +56,6 @@ class BotCommands:
         submit(f"pls {choice(choices)}")
         self.commands_sent += 1
 
-    def guess(self):
-        submit(f"pls guess {randint(0, 10)}")
-        self.commands_sent += 1
-
-    def pet(self):
-        submit("pls pet" + (" train" if randint(0, 1) else ''))
-        self.commands_sent += 1
-
     def profile(self):
         submit("pls profile")
         self.commands_sent += 1
@@ -89,15 +81,12 @@ class BotCommands:
 
 p = BotCommands()
 # currency and images
-delays = [
-    {p.beg: 45}, {p.pm: 60}, {p.hunt: 60}, {p.fish: 45}, {p.gamble: 50}, {p.triv: 25}, {p.inv: 70}, {p.pet_pat: 100},
-    {p.image: 15}, {p.pet: 15}, {p.profile: 40}, {p.rich: 100}, {p.shop: 20}, {p.fun: 22}, {p.memey: 20}]
-
+delays = {p.beg: 45, p.pm: 60, p.hunt: 60, p.fish: 45, p.gamble: 50, p.triv: 25, p.inv: 70, p.pet_pat: 100,
+          p.image: 15, p.profile: 40, p.rich: 100, p.shop: 20, p.fun: 22, p.memey: 20}
 
 commands = {}
-for command in delays:
-    commands[list(command.keys())[0]] = time()
-
+for command in delays.keys():
+    commands[command] = time()
 
 sleep(3)
 submit("pls bal")
