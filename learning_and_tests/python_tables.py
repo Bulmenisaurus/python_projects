@@ -4,7 +4,7 @@ class Table:
         Initializes variables and stuffs
 
         self.columns generates a list of columns
-        >>> [['karate kid', 'nemo'], ['1 hour', '15 min']]
+        >>> #[['karate kid', 'nemo'], ['1 hour', '15 min']]
 
         :param table_header: The header of the table (always on the first row)
         For example: ['Movies', 'length', 'rating']
@@ -36,9 +36,10 @@ class Table:
 
     def table(self):
         paddings = self._row_widths()
-        headers = [d.center(paddings[index]) for index, d in enumerate(self.table_header)]
+        headers = '|'.join([d.center(paddings[index]) for index, d in enumerate(self.table_header)])
         print(headers)
-        data = [d.center(paddings[index]) for index, d in enumerate(self.rows[0])]
+        print('-' * len(''.join(headers)))
+        data = '|'.join([d.center(paddings[index]) for index, d in enumerate(self.rows[0])])
         print(data)
 
 
