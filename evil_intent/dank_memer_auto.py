@@ -20,7 +20,7 @@ class BotCommands:
     def pm(self):
         submit("pls pm")
         sleep(2)
-        submit("r")
+        submit(choice("frick"))
         self.commands_sent += 1
 
     def hunt(self):
@@ -31,6 +31,12 @@ class BotCommands:
     def fish(self):
         submit("pls fish")
         sleep(9)
+        self.commands_sent += 1
+
+    def highlow(self):
+        submit("pls highlow")
+        sleep(2)
+        submit(choice(("high", "low")))
         self.commands_sent += 1
 
     def gamble(self):
@@ -60,10 +66,6 @@ class BotCommands:
         submit("pls profile")
         self.commands_sent += 1
 
-    def rich(self):
-        submit("pls rich")
-        self.commands_sent += 1
-
     def shop(self):
         submit(f"pls shop {randint(2, 4) if randint(0, 1) else ''}")
         self.commands_sent += 1
@@ -81,8 +83,8 @@ class BotCommands:
 
 p = BotCommands()
 # currency and images
-delays = {p.beg: 45, p.pm: 60, p.hunt: 60, p.fish: 45, p.gamble: 50, p.triv: 25, p.inv: 70, p.pet_pat: 100,
-          p.image: 15, p.profile: 40, p.rich: 100, p.shop: 20, p.fun: 22, p.memey: 20}
+delays = {p.beg: 45, p.pm: 60, p.hunt: 60, p.fish: 60, p.highlow: 20, p.gamble: 50, p.triv: 25, p.inv: 70,
+          p.pet_pat: 100,p.image: 15, p.profile: 40, p.shop: 20, p.fun: 22, p.memey: 20}
 
 commands = {}
 for command in delays.keys():
