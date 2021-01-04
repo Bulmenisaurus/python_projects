@@ -1,4 +1,4 @@
-# ProjectEuler
+# mathematical_python
 
 
 ### ⚠️⚠️ SPOILER WARNING ⚠️⚠️
