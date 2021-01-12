@@ -5,7 +5,7 @@ import itertools
 
 # in order for each face: value, expression, length. isAsci and length are added automatically
 
-f = open("/Users/meow/programming/PycharmProjects/!Python_on_github/APIS/my_api/my_api_data.json", "r")
+f = open("/Users/meow/programming/PycharmProjects/Python/APIS/my_api/my_api_data.json", "r")
 emoticon_python = json.load(f)
 f.close()
 

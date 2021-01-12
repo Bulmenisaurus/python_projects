@@ -61,7 +61,7 @@ with open("main_of the day.html", "w") as main_html:
     print("Wrote to file")
 
 print("Opening tab.")
-webbrowser.open_new("file:///Users/meow/programming/PycharmProjects/!Python_on_github/major_projects/"
+webbrowser.open_new("file:///Users/meow/programming/PycharmProjects/Python/major_projects/"
                     "of_the_day/main_of%20the%20day.html")
 print("Done")
 

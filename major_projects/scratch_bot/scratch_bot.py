@@ -26,7 +26,7 @@ class MeBot:
         self.client = None
 
     def login(self):
-        driver = webdriver.Chrome(executable_path="/Users/meow/programming/PycharmProjects/!Python_on_github"
+        driver = webdriver.Chrome(executable_path="/Users/meow/programming/PycharmProjects/Python"
                                                   "/major_projects/scratch_bot/chromedriver")
         driver.get(self.base+'/users/'+self.username)
 
