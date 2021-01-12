@@ -20,7 +20,7 @@ def filename(code_extensions=('py', 'pym', 'cpp', 'jasm'),
             return name + extensions
     else:
         if length_cap:
-        
+            return (name + '.' + random.choice(asset_extensions))[:length_cap]
         else:
             return name + '.' + random.choice(asset_extensions)
 
