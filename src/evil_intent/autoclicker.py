@@ -10,5 +10,5 @@ while True:
     while True:
         pyautogui.click()
 
-        if (time.time() - timeStart) > 600:
+        if (time.time() - timeStart) > 15:
             break
