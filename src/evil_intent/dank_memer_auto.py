@@ -4,12 +4,22 @@ from random import random, randint, choice
 
 
 def submit(text: str):
+    """
+    Helper function to write some text
+
+    :param text: The text to be written
+    :return: Absolutely nothing
+    """
     write(text, interval=.025)
     press("enter")
 
 
 # images and currency
 class BotCommands:
+    """
+    A class for all the different commands.
+    It keeps track of how many commands have been sent.
+    """
     def __init__(self):
         self.commands_sent = 0
 
@@ -82,7 +92,7 @@ class BotCommands:
 
 
 p = BotCommands()
-# currency and images
+# This just initializes the different cool downs of different commands
 delays = {p.beg: 45, p.pm: 60, p.hunt: 60, p.fish: 60, p.highlow: 20, p.gamble: 50, p.triv: 25, p.inv: 70,
           p.pet_pat: 100, p.image: 15, p.profile: 40, p.shop: 20, p.fun: 22, p.memey: 20}
 
@@ -95,7 +105,7 @@ submit("pls bal")
 start_time = time()
 while True:
     sleep(.75)
-    for command in commands.items():  # command(function, time when unlocks)
+    for command in commands.items():  # command = (function, time when unlocks)
         try:
             if command[1] < time():
                 sleep(.5)
