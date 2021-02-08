@@ -84,7 +84,7 @@ class BotCommands:
 p = BotCommands()
 # currency and images
 delays = {p.beg: 45, p.pm: 60, p.hunt: 60, p.fish: 60, p.highlow: 20, p.gamble: 50, p.triv: 25, p.inv: 70,
-          p.pet_pat: 100,p.image: 15, p.profile: 40, p.shop: 20, p.fun: 22, p.memey: 20}
+          p.pet_pat: 100, p.image: 15, p.profile: 40, p.shop: 20, p.fun: 22, p.memey: 20}
 
 commands = {}
 for command in delays.keys():
@@ -94,7 +94,7 @@ sleep(3)
 submit("pls bal")
 start_time = time()
 while True:
-    sleep(2)
+    sleep(.75)
     for command in commands.items():  # command(function, time when unlocks)
         try:
             if command[1] < time():
