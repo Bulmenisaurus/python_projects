@@ -1,0 +1,187 @@
+[
+    {
+        "face": ". \u0331.",
+        "face_id": null,
+        "expression": "apathy"
+    },
+    {
+        "face": "._.",
+        "face_id": null,
+        "expression": "apathy"
+    },
+    {
+        "face": ":|",
+        "face_id": null,
+        "expression": "apathy"
+    },
+    {
+        "face": "-_-",
+        "face_id": null,
+        "expression": "apathy"
+    },
+    {
+        "face": "\u23d5",
+        "face_id": null,
+        "expression": "apathy"
+    },
+    {
+        "face": "\u00b7-\u00b7",
+        "face_id": null,
+        "expression": "apathy"
+    },
+    {
+        "face": "o_O",
+        "face_id": null,
+        "expression": "surprise"
+    },
+    {
+        "face": ":()",
+        "face_id": null,
+        "expression": "surprise"
+    },
+    {
+        "face": "~_~",
+        "face_id": null,
+        "expression": "surprise"
+    },
+    {
+        "face": ":)",
+        "face_id": null,
+        "expression": "happy"
+    },
+    {
+        "face": ";)",
+        "face_id": null,
+        "expression": "happy"
+    },
+    {
+        "face": ";]",
+        "face_id": null,
+        "expression": "happy"
+    },
+    {
+        "face": ":}",
+        "face_id": null,
+        "expression": "happy"
+    },
+    {
+        "face": ":\u00ac)",
+        "face_id": null,
+        "expression": "happy"
+    },
+    {
+        "face": ":-)",
+        "face_id": null,
+        "expression": "happy"
+    },
+    {
+        "face": "<:)",
+        "face_id": null,
+        "expression": "happy"
+    },
+    {
+        "face": ":>)",
+        "face_id": null,
+        "expression": "happy"
+    },
+    {
+        "face": ":D",
+        "face_id": null,
+        "expression": "happy"
+    },
+    {
+        "face": ":P",
+        "face_id": null,
+        "expression": "happy"
+    },
+    {
+        "face": ":\u2283)",
+        "face_id": null,
+        "expression": "happy"
+    },
+    {
+        "face": "^_^",
+        "face_id": null,
+        "expression": "happy"
+    },
+    {
+        "face": "\u23d3",
+        "face_id": null,
+        "expression": "upsidedown"
+    },
+    {
+        "face": ".\u301c.",
+        "face_id": null,
+        "expression": "upsidedown"
+    },
+    {
+        "face": ".-.",
+        "face_id": null,
+        "expression": "upsidedown"
+    },
+    {
+        "face": "\u23d4",
+        "face_id": null,
+        "expression": "upsidedown"
+    },
+    {
+        "face": ":(",
+        "face_id": null,
+        "expression": "mustache"
+    },
+    {
+        "face": "D:",
+        "face_id": null,
+        "expression": "mustache"
+    },
+    {
+        "face": ":\u20ac",
+        "face_id": null,
+        "expression": "mustache"
+    },
+    {
+        "face": ":\u00a2",
+        "face_id": null,
+        "expression": "mustache"
+    },
+    {
+        "face": ":[",
+        "face_id": null,
+        "expression": "mustache"
+    },
+    {
+        "face": ":C",
+        "face_id": null,
+        "expression": "mustache"
+    },
+    {
+        "face": ":{",
+        "face_id": null,
+        "expression": "mustache"
+    },
+    {
+        "face": ":\u2211",
+        "face_id": null,
+        "expression": "mustache"
+    },
+    {
+        "face": ":\u29fc)",
+        "face_id": null,
+        "expression": "mustache"
+    },
+    {
+        "face": "^\u23de^",
+        "face_id": null,
+        "expression": "mustache"
+    },
+    {
+        "face": ":P",
+        "face_id": null,
+        "expression": "tongue"
+    },
+    {
+        "face": ":P",
+        "face_id": null,
+        "expression": "tongue"
+    }
+]
