@@ -61,8 +61,9 @@ def draw_board(board: list, players_fill_char: dict, include_column_names=True) 
         grid += '║ ' + ' ║ '.join(map(chr, range(65, 72))) + ' ║'
     return grid
 
-
-
+def check_wins(board):
+    for column in board:
+        if repr(column)
 
 player = True
 while True:
