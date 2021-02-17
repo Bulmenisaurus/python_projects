@@ -1,187 +1,187 @@
 [
     {
         "face": ". \u0331.",
-        "face_id": null,
-        "expression": "apathy"
+        "isAscii": false,
+        "length": 4
     },
     {
         "face": "._.",
-        "face_id": null,
-        "expression": "apathy"
+        "isAscii": true,
+        "length": 3
     },
     {
         "face": ":|",
-        "face_id": null,
-        "expression": "apathy"
+        "isAscii": true,
+        "length": 2
     },
     {
         "face": "-_-",
-        "face_id": null,
-        "expression": "apathy"
+        "isAscii": true,
+        "length": 3
     },
     {
         "face": "\u23d5",
-        "face_id": null,
-        "expression": "apathy"
+        "isAscii": false,
+        "length": 1
     },
     {
         "face": "\u00b7-\u00b7",
-        "face_id": null,
-        "expression": "apathy"
+        "isAscii": false,
+        "length": 3
     },
     {
         "face": "o_O",
-        "face_id": null,
-        "expression": "surprise"
+        "isAscii": true,
+        "length": 3
     },
     {
         "face": ":()",
-        "face_id": null,
-        "expression": "surprise"
+        "isAscii": true,
+        "length": 3
     },
     {
         "face": "~_~",
-        "face_id": null,
-        "expression": "surprise"
+        "isAscii": true,
+        "length": 3
     },
     {
         "face": ":)",
-        "face_id": null,
-        "expression": "happy"
+        "isAscii": true,
+        "length": 2
     },
     {
         "face": ";)",
-        "face_id": null,
-        "expression": "happy"
+        "isAscii": true,
+        "length": 2
     },
     {
         "face": ";]",
-        "face_id": null,
-        "expression": "happy"
+        "isAscii": true,
+        "length": 2
     },
     {
         "face": ":}",
-        "face_id": null,
-        "expression": "happy"
+        "isAscii": true,
+        "length": 2
     },
     {
         "face": ":\u00ac)",
-        "face_id": null,
-        "expression": "happy"
+        "isAscii": false,
+        "length": 3
     },
     {
         "face": ":-)",
-        "face_id": null,
-        "expression": "happy"
+        "isAscii": true,
+        "length": 3
     },
     {
         "face": "<:)",
-        "face_id": null,
-        "expression": "happy"
+        "isAscii": true,
+        "length": 3
     },
     {
         "face": ":>)",
-        "face_id": null,
-        "expression": "happy"
+        "isAscii": true,
+        "length": 3
     },
     {
         "face": ":D",
-        "face_id": null,
-        "expression": "happy"
+        "isAscii": true,
+        "length": 2
     },
     {
         "face": ":P",
-        "face_id": null,
-        "expression": "happy"
+        "isAscii": true,
+        "length": 2
     },
     {
         "face": ":\u2283)",
-        "face_id": null,
-        "expression": "happy"
+        "isAscii": false,
+        "length": 3
     },
     {
         "face": "^_^",
-        "face_id": null,
-        "expression": "happy"
+        "isAscii": true,
+        "length": 3
     },
     {
         "face": "\u23d3",
-        "face_id": null,
-        "expression": "upsidedown"
+        "isAscii": false,
+        "length": 1
     },
     {
         "face": ".\u301c.",
-        "face_id": null,
-        "expression": "upsidedown"
+        "isAscii": false,
+        "length": 3
     },
     {
         "face": ".-.",
-        "face_id": null,
-        "expression": "upsidedown"
+        "isAscii": true,
+        "length": 3
     },
     {
         "face": "\u23d4",
-        "face_id": null,
-        "expression": "upsidedown"
+        "isAscii": false,
+        "length": 1
     },
     {
         "face": ":(",
-        "face_id": null,
-        "expression": "mustache"
+        "isAscii": true,
+        "length": 2
     },
     {
         "face": "D:",
-        "face_id": null,
-        "expression": "mustache"
+        "isAscii": true,
+        "length": 2
     },
     {
         "face": ":\u20ac",
-        "face_id": null,
-        "expression": "mustache"
+        "isAscii": false,
+        "length": 2
     },
     {
         "face": ":\u00a2",
-        "face_id": null,
-        "expression": "mustache"
+        "isAscii": false,
+        "length": 2
     },
     {
         "face": ":[",
-        "face_id": null,
-        "expression": "mustache"
+        "isAscii": true,
+        "length": 2
     },
     {
         "face": ":C",
-        "face_id": null,
-        "expression": "mustache"
+        "isAscii": true,
+        "length": 2
     },
     {
         "face": ":{",
-        "face_id": null,
-        "expression": "mustache"
+        "isAscii": true,
+        "length": 2
     },
     {
         "face": ":\u2211",
-        "face_id": null,
-        "expression": "mustache"
+        "isAscii": false,
+        "length": 2
     },
     {
         "face": ":\u29fc)",
-        "face_id": null,
-        "expression": "mustache"
+        "isAscii": false,
+        "length": 3
     },
     {
         "face": "^\u23de^",
-        "face_id": null,
-        "expression": "mustache"
+        "isAscii": false,
+        "length": 3
     },
     {
         "face": ":P",
-        "face_id": null,
-        "expression": "tongue"
+        "isAscii": true,
+        "length": 2
     },
     {
         "face": ":P",
-        "face_id": null,
-        "expression": "tongue"
+        "isAscii": true,
+        "length": 2
     }
 ]
