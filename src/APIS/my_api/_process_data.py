@@ -1,18 +1,20 @@
 import json
 
-
-with open('my_api_data.json') as f:
-    data = json.load(f)
-
+with open('emoticons.json') as f:
+    data: list = json.load(f)
     new_data = []
 
-    for expression_type in data:
-        expression = expression_type['expression']
-        for face in expression_type['faces']:
-            face['expression'] = expression
-            new_data.append(face)
+    for face in data:
+        del face['expression']
+        del face['face_id']
 
-    print(new_data)
+        if not face.get('isAscii'):
+            face['isAscii'] = face['face'].isascii()
+
+        if not face.get('length'):
+            face['length'] = len(face['face'])
+
+        new_data.append(face)
 
 with open('emoticons.json', 'w') as f:
-    f.write(json.dumps(new_data, indent=4))
+    json.dump(new_data, f, indent=4)
