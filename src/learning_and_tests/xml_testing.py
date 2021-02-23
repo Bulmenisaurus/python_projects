@@ -2,18 +2,21 @@ from bs4 import BeautifulSoup, element
 
 myXml = '''<?xml version="1.0" encoding="UTF-8"?>
 <code>
-    <print end=" ">Hello</print>
+    <print end=" "><i>i</i></print>
     <print>world!</print>
     <if a="0==0"><print>hi!</print></if>
     <print>this should be seperate</print>
 </code>'''
 
 def handle_single_tag(tag: element.Tag):
+    print(type(tag))
+    print(tag)
     if tag.name == 'print':
-        print(tag.text)
+        pass #print(tag.text, type(tag.text))
 
 
-html = BeautifulSoup(myXml, 'xml')
-for tag in html.code.children:
-    if type(tag) == element.Tag:
-        handle_single_tag(tag)
+soup = BeautifulSoup(myXml, 'xml')
+code: element.Tag = soup.code
+tags = code.find_all(recursive=False)
+print(type(tags[0].contents[0]))
+print(tags[0].contents)
