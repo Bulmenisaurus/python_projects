@@ -20,7 +20,7 @@ time.sleep(2)
 start_time = time.time()
 clicks = 0
 while True:
-    clicks += 50
+    clicks += 10
     pyautogui.click(button=mouse_button, _pause=False, clicks=10)
 
     if (time.time() - start_time) > int(duration):
