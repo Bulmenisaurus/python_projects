@@ -9,14 +9,20 @@ myXml = '''<?xml version="1.0" encoding="UTF-8"?>
 </code>'''
 
 def handle_single_tag(tag: element.Tag):
-    print(type(tag))
-    print(tag)
     if tag.name == 'print':
-        pass #print(tag.text, type(tag.text))
+        print(tag.text)
+
+
+def does_tag_contain_other_tags(tag: element.Tag):
+    return type(tag.contents[0]) == element.Tag
 
 
 soup = BeautifulSoup(myXml, 'xml')
 code: element.Tag = soup.code
 tags = code.find_all(recursive=False)
-print(type(tags[0].contents[0]))
-print(tags[0].contents)
+
+for tag in tags:
+    if does_tag_contain_other_tags(tag):
+        pass
+    else:
+        handle_single_tag(tag)
