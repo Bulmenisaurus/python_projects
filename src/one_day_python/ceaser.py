@@ -46,3 +46,4 @@ elif choice == 'hack':
 
     print("Hacking complete:\n\n")
     print(decodings[validating.index(max(validating))])
+    print(f"Key: {validating.index(max(validating))}")
