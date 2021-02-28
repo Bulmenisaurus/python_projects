@@ -1,7 +1,7 @@
 import string
 
 original = string.ascii_lowercase
-new = input('What is the new alphabet?\n')
+new = input('What is the new alphabet?\n').lower()
 
 
 def substitute_letter(letter: str, unmapped: str, mapped: str):
